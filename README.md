@@ -7,31 +7,33 @@ Models based on Resampling:
 1. Random Oversampling
 - ![Classification Report](https://github.com/ketpradh/Credit_Risk_Analysis/blob/main/Resources/Random%20Oversampling%20Report.PNG)
 - ![Accuracy](https://github.com/ketpradh/Credit_Risk_Analysis/blob/main/Resources/Random%20Oversampling%20Acc.PNG)
-- This model has an accuracy of **66%** with **99%** precision and **59%** recall values.
+- This model has an accuracy of **66%** with overall **99%** precision and **59%** recall values.
 2. SMOTE
 - ![Classification Report](https://github.com/ketpradh/Credit_Risk_Analysis/blob/main/Resources/SMOTE%20Classification%20Report.PNG)
 - ![Accuracy](https://github.com/ketpradh/Credit_Risk_Analysis/blob/main/Resources/SMPOTE%20Acc.PNG)
-- This model has an accuracy of **65%** with **99%** precision and **68%** recall values.
+- This model has an accuracy of **65%** with  overall**99%** precision and **68%** recall values.
 3. Clustered Centroid
 - ![Classification Report](https://github.com/ketpradh/Credit_Risk_Analysis/blob/main/Resources/ClusteredCentroids%20CR.PNG)
 - ![Accuracy](https://github.com/ketpradh/Credit_Risk_Analysis/blob/main/Resources/ClusteredCentroids%20Acc.PNG)
-- This model has an accuracy of **54%** with **99%** precision and **40%** recall values.
+- This model has an accuracy of **54%** with overall **99%** precision and **40%** recall values.
 4. SMOTEEN 
 - ![Classification Report](https://github.com/ketpradh/Credit_Risk_Analysis/blob/main/Resources/SMOTEEN%20CR.PNG)
 - ![Accuracy](https://github.com/ketpradh/Credit_Risk_Analysis/blob/main/Resources/SMOTEEN%20aCC.PNG)
-- This model has an accuracy of **64%** with **99%** precision and **57%** recall values.
+- This model has an accuracy of **64%** with overall **99%** precision and **57%** recall values.
  Ensemble Learners:
 5. Balanced Random Forest Classifier
 - ![Classification Report](https://github.com/ketpradh/Credit_Risk_Analysis/blob/main/Resources/BalancedRandom%20Classification%20Report.PNG)
 - ![Accuracy](https://github.com/ketpradh/Credit_Risk_Analysis/blob/main/Resources/BalancedRandom%20Acc.PNG)
-- This model has an accuracy of **93%** with **99%** precision and **94%** recall values.
+- This model has an accuracy of **93%** with overall **99%** precision and **94%** recall values.
 6. Easy Ensemble AdaBoost Classifier
 - ![Classification Report](https://github.com/ketpradh/Credit_Risk_Analysis/blob/main/Resources/EasyEnsemble%20CR.PNG)
 - ![Accuracy](https://github.com/ketpradh/Credit_Risk_Analysis/blob/main/Resources/EasyEnsemble%20Acc.PNG)
-- This model has an accuracy of **93%** with **99%** precision and **94%** recall values.
+- This model has an accuracy of **93%** with overall **99%** precision and **94%** recall values.
 
 
-## Summary: Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.
+## Summary:
 - Based on the above evaluation for the models, we find that the Ensemble learners perform better than the other four models on the dataset in terms of its accuracy. 
-- Both, the Balanced Random Forest Classifier model and the Easy Ensemble Classifier Model have accuracy of **93%** and precision of **99%**. 
-- **Having better precision values for the credit risk is important so we have less False Positives.** In terms of precision, all six models have similar precison of **99%**, hence any of the six models can be selected. But, for better accuracy, we can select either the Balanced Random Forest Classifier model or the Easy Ensemble Classifier Model for this analysis.
+- Both, the Balanced Random Forest Classifier model and the Easy Ensemble Classifier Model have accuracy of **93%** and precision of **99%** and recall of **94%**.
+- In terms of precision, all six models have similar precision of **99%**. **However, for our analysis, we need to have higher sensitivity(recall) values for the high_risk credit data. Hence, we need to have less False Negatives in that category.** We find that both the Ensemble Learners have a high recall for high_risk category of **92%** and a overall recall of **94%**.
+- Hence, we can select either the Balanced Random Forest Classifier model or the Easy Ensemble Classifier Model for this analysis. 
+
