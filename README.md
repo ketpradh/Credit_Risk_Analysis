@@ -1,10 +1,10 @@
 # Credit_Risk_Analysis by Ketaki
 ## Overview of the analysis:
-This project is to help LendingClub analyze the credit risk for loans to their customers based on their credit card dataset using machine learning algorithms.  This dataset is analyzed using imbalanced-learn and scikit-learn libraries to build and evaluate six models using resampling that predict credit risk. Based on the evaluation of these models, we can select a suitable one to be actually used for this project.
+This project is to help LendingClub analyze the credit risk for loans to their customers based on their credit card dataset using machine learning algorithms.  This dataset is analyzed using imbalanced-learn and scikit-learn libraries to build and evaluate six models using resampling that predict credit risk. Based on the evaluation of these models, we can recommend a suitable one to be used for this predicting credit risk.
 ## Results: 
-For our analysis, we need to have **higher sensitivity(recall) values for the high_risk category** to identify potential high risk customers that might default on their loans.
+For our analysis, we need to have **higher sensitivity(recall) values for the high_risk loan category** to identify potential high risk loans for LendingClub that might be defaulted. 
 The six models used for this project are:
-Models based on Resampling:
+### Models based on Resampling:
 1. Random Oversampling
 - ![Classification Report](https://github.com/ketpradh/Credit_Risk_Analysis/blob/main/Resources/Random%20Oversampling%20Report.PNG)
 - ![Accuracy](https://github.com/ketpradh/Credit_Risk_Analysis/blob/main/Resources/Random%20Oversampling%20Acc.PNG)
@@ -29,7 +29,7 @@ Models based on Resampling:
 - This model has an accuracy of **0.64**.
 - It has  **0.01** precision and  **0.72** recall values and F1 score of **0.02** for high_risk category.
 - It has  **1.0** precision and **0.57** recall values and F1 score of **0.72** for low_risk category.
- Ensemble Learners:
+### Ensemble Learners:
 5. Balanced Random Forest Classifier
 - ![Classification Report](https://github.com/ketpradh/Credit_Risk_Analysis/blob/main/Resources/BalancedRandom%20Classification%20Report.PNG)
 - ![Accuracy](https://github.com/ketpradh/Credit_Risk_Analysis/blob/main/Resources/BalancedRandom%20Acc.PNG)
@@ -46,9 +46,9 @@ Models based on Resampling:
 
 
 ## Summary:
-- Based on the above evaluation for the models, we find that the Ensemble learners perform better than the other four models on the dataset in terms of its accuracy, and overall precision and recall values for predicting low_risk category or good loans. 
-- Both, the Balanced Random Forest Classifier model and the Easy Ensemble Classifier Model have accuracy of **0.93** and overall precision of **0.99** and recall of **0.94**.
-- **However, for our analysis, we need to have higher sensitivity(recall) values for the high_risk credit data to identify potential bad loans. Hence, we need to have less False Negatives in that category.** We find that both the Ensemble Learners have a high recall for high_risk category of **0.92**, but low precision(**0.09**) low F1 score(**0.16**).
-- The other four models do not have as high recall for high_risk loans as Ensemble Learners but are in the range of **0.62 - 0.74**. However, have very low precision of **0.01** and F1 score **0.02**. 
+- Based on the above evaluation for the models, we find that the Ensemble learners perform better than the other four models on the dataset in terms of its accuracy, as well as in terms of precision and recall values for predicting low_risk category or good loans. 
+- Both, the Balanced Random Forest Classifier model and the Easy Ensemble Classifier Model have an accuracy of **0.93** and precision of **1.00** and recall of **0.94** for predicting low_risk or good loans.
+- **However, for our analysis, in addition to predicting low-risk good loans, we need a model with high sensitivity(recall) as well as precision for predicting the high_risk credit or potential bad loans.** We find that both the Ensemble Learners have a high recall of **0.92** for high_risk category, but low precision(**0.09**) and a low F1 score(**0.16**).
+- The other four models do not have as high recall for high_risk loans as Ensemble Learners and are in the range of **0.62 - 0.74**. However, have very low precision of **0.01** and F1 score **0.02**. 
 - Hence, we do not have a model that satisfies the recall and precision needs for predicting credit risk(high_risk bad loans) for the project. However, we can select either the Balanced Random Forest Classifier model or the Easy Ensemble Classifier Model for their high recall values and good overall metrics for predicting low_risk loans. 
 
