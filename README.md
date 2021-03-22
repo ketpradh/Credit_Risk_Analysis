@@ -1,6 +1,6 @@
 # Credit_Risk_Analysis by Ketaki
 ## Overview of the analysis:
-This project is to help LendingClub analyze the credit risk for loans to their customers based on their credit card dataset.  This dataset is analyzed using imbalanced-learn and scikit-learn libraries to build and evaluate six models using resampling that predict credit risk. Based on the evaluation of these models, we can select a suitable one to be actually used for this project.
+This project is to help LendingClub analyze the credit risk for loans to their customers based on their credit card dataset using machine learning algorithms.  This dataset is analyzed using imbalanced-learn and scikit-learn libraries to build and evaluate six models using resampling that predict credit risk. Based on the evaluation of these models, we can select a suitable one to be actually used for this project.
 ## Results: 
 For our analysis, we need to have **higher sensitivity(recall) values for the high_risk category** to identify potential high risk customers that might default on their loans.
 The six models used for this project are:
